@@ -1,0 +1,48 @@
+package Project_java2;
+import java.time.LocalDate;
+
+public class Individual extends Customer {
+    private String licenseNumber;
+    private LocalDate birthDate;
+    Individual( String Name, String Address, String phoneNumber, String licenseNumber, LocalDate birthDate) {
+        super( Name, Address, phoneNumber);
+        this.licenseNumber = licenseNumber;
+      
+        this.birthDate = birthDate;
+        }
+     
+
+    public String getLicenseNumber() {
+        return licenseNumber;
+    }
+
+    public void setLicenseNumber(String licenseNumber) {
+        this.licenseNumber = licenseNumber;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getType() {
+        return "Individual";
+    }
+
+    @Override
+    public double getDiscountRate() {
+        return 0;
+    }
+
+    @Override
+    public void printinfo() {
+        System.out.println("Individual Customer Info");
+        System.out.println(
+                "ID:" + ID + "  |  Name:" + Name + "  |  Address:" + Address + "  |  Phone Number:" + phoneNumber);
+        System.out.println("Driving License Number:" + licenseNumber + "  |  Birthdate:" + birthDate);
+    }
+
+}
