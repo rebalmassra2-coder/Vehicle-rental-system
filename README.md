@@ -26,24 +26,22 @@ Built to practice core **Object-Oriented Programming** principles.
 
 ## UML Class Diagram
 
-![UML Class Diagram](docs/uml_class_diagram.png)
+![UML Class Diagram](uml_class_diagram.svg)
 
 ## Project Structure
 
 ```
-src/Project_java2/
-  Vehicle.java      (abstract)
-  Car.java
-  Motorcycle.java
-  Truck.java
-  Customer.java     (abstract)
-  Individual.java
-  Company.java
-  Contract.java
-  SafeInput.java    (input validation)
-  Main.java         (menus and program entry)
-docs/
-  uml_class_diagram.png
+Vehicle.java      (abstract)
+Car.java
+Motorcycle.java
+Truck.java
+Customer.java     (abstract)
+Individual.java
+Company.java
+Contract.java
+SafeInput.java    (input validation)
+Main.java         (menus and program entry)
+uml_class_diagram.svg
 ```
 
 ## How to Run
@@ -51,9 +49,8 @@ docs/
 Requires **JDK 11 or newer**.
 
 ```bash
-cd src
-javac Project_java2/*.java
-java Project_java2.Main
+javac -d out *.java
+java -cp out Project_java2.Main
 ```
 
 ## Example: Late Return
